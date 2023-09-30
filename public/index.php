@@ -40,7 +40,7 @@
                             <div class="media">
                                 <div class="media-content">
                                     <p class="title is-5">Ricardo Henrique Santos</p>
-                                    <span class="tag is-dark is-medium">Desenvolvedor de Sistemas</span>
+                                    <span class="tag is-primary is-medium">Desenvolvedor de Sistemas</span>
                                 </div>
                             </div>
                         </div>

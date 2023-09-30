@@ -46,7 +46,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="column is-8">
                     <div class="card">
                         <header class="card-header">
