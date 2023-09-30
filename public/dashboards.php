@@ -16,9 +16,9 @@
     <header>
         <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
             <ul>
-                <li><a class="navbar-item" href="index.html">Início</a></li>
-                <li><a class="navbar-item is-active" href="dashboards.html">Dashboards</a></li>
-                <li><a class="navbar-item" href="contact.html">Contato</a></li>
+                <li><a class="navbar-item" href="index.php">Início</a></li>
+                <li><a class="navbar-item is-active" href="dashboards.php">Dashboards</a></li>
+                <li><a class="navbar-item" href="contact.php">Contato</a></li>
             </ul>
         </nav>
     </header>
