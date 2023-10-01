@@ -12,7 +12,10 @@
     </script>
     <meta property="og:title" content="Portfolio">
     <meta property="og:description" content="Ricardo Henrique Santos">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://www.ricardosantins.xyz/">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
