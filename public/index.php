@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H98NC9SSVK"></script>
     <script>
@@ -11,17 +10,14 @@
     gtag('js', new Date());
     gtag('config', 'G-H98NC9SSVK');
     </script>
-
     <meta property="og:title" content="Portfolio">
     <meta property="og:description" content="Ricardo Henrique Santos">
     <meta property="og:image" content="img/og.jpg">
-    <meta property="og:url" content="https://www.ricardosantins.xyz">
-
-    <link rel="icon" href="img/desenvolvedor.ico" type="image/x-icon">
-
+    <meta property="og:url" content="https://www.ricardosantins.xyz/">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/desenvolvedor.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
