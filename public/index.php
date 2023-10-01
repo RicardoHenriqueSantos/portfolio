@@ -12,6 +12,13 @@
     gtag('config', 'G-H98NC9SSVK');
     </script>
 
+    <meta property="og:title" content="Portfolio">
+    <meta property="og:description" content="Ricardo Henrique Santos">
+    <meta property="og:image" content="img/og.jpg">
+    <meta property="og:url" content="https://www.ricardosantins.xyz">
+
+    <link rel="icon" href="img/desenvolvedor.ico" type="image/x-icon">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,11 +71,7 @@
                         </header>
                         <div class="card-content">
                             <div class="content">
-                                Sou estudante de programação com forte foco em Python e SQL. Estou sempre ansioso para
-                                aprender mais e atualmente expandindo meu conhecimento para incluir Java, NoSQL e
-                                desenvolvimento front-end. Estou entusiasmado com as possibilidades do que posso criar
-                                com essas novas habilidades e mal posso esperar para ver aonde minha jornada de
-                                programação me levará.
+                            Sou estudante de programação com foco atual em Desenvolvimento Web. Estou sempre ansioso para aprender mais e atualmente expandindo meu conhecimento para incluir React, NodeJS e também NoSQL. Estou entusiasmado com as possibilidades do que posso criar com essas novas habilidades e mal posso esperar para ver aonde minha jornada de programação me levará.
                             </div>
                         </div>
                     </div>
