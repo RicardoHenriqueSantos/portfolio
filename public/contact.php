@@ -65,7 +65,7 @@
                         </header>
                         <div class="card-content">
                             <div class="content">
-                                <form action="php/mensagem.php" method="POST">
+                                <form action="https://jarn2uzysyrpbafhs5on5ihj3i0veehu.lambda-url.us-east-1.on.aws" method="POST">
                                     <div class="field">
                                         <label class="label" for="nome">Nome</label>
                                         <div class="control has-icons-left has-icons-right">
