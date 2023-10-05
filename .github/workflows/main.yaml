@@ -1,19 +1,27 @@
-name: Deploy to Heroku
+name: Deploy Prod
 
 on:
   push:
     branches:
-      - master
+    - master
+
+env:
+  BUCKET_NAME: "bennun-labs-rickys-website"
+
 
 jobs:
-  build_and_deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: akhileshns/heroku-deploy@v3.12.14
-        with:
-          heroku_email: "${{ vars.HEROKU_EMAIL }}"
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: "bennun-rickys-folio"
-          appdir: public
-          buildpack: https://github.com/heroku/heroku-buildpack-php
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Deploy static site to S3 bucket
+      run: aws s3 sync ./public/ s3://${{env.BUCKET_NAME}} --delete
