@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H98NC9SSVK"></script>
     <script>
@@ -25,7 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
-    <title>Portfólio Ricardo Henrique Santos</title>
+    <title>Ricardo Henrique Santos - Desenvolvedor de Sistemas</title>
 </head>
 
 <body>
@@ -84,13 +85,6 @@
                         <div class="card-content">
                             <div class="content">
                                 <div class="columns">
-
-                                    <!--<div class="column is-3">
-                                        <figure class="image is-128x128">
-                                            <img class="is-rounded"
-                                                src="https://bulma.io/images/placeholders/128x128.png">
-                                        </figure>
-                                    </div>-->
 
                                     <div class="column">
                                         <p class="title is-5">Algoritmos e Lógica de Programação</p>
@@ -195,8 +189,11 @@
         <div class="content has-text-centered">
             <p>Desenvolvido por <strong>Ricardo Henrique Santos</strong></p>
         </div>
+        <div class="content has-text-centered">
+            <a target="_blank" href="https://github.com/RicardoHenriqueSantos">
+                <img width="40" src="img/github.png">
+        </div>
     </footer>
 
 </body>
-
 </html>
