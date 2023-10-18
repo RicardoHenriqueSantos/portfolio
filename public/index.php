@@ -70,7 +70,7 @@
                             <p class="card-header-title">Sobre mim</p>
                         </header>
                         <div class="card-content">
-                            <div class="content">
+                            <div class="content" Align="justify">
                             Sou estudante de programação com foco atual em Desenvolvimento Web. Estou sempre ansioso para aprender mais e atualmente expandindo meu conhecimento para incluir React, NodeJS e também NoSQL. Estou entusiasmado com as possibilidades do que posso criar com essas novas habilidades e mal posso esperar para ver aonde minha jornada de programação me levará.
                             </div>
                         </div>
@@ -187,7 +187,7 @@
 
     <footer class="footer">
         <div class="content has-text-centered">
-            <p>Desenvolvido por <strong>Ricardo Henrique Santos</strong></p>
+            <p>Desenvolvido por <strong>Ricardo Henrique Santos</strong> em parceria com <a target="_blank" href="https://github.com/grglucastr"><strong>Bennun Labs</strong></a>.</p>
         </div>
         <div class="content has-text-centered">
             <a target="_blank" href="https://github.com/RicardoHenriqueSantos">
