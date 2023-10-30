@@ -1,19 +1,46 @@
-name: Deploy to Heroku
+name: Deploy AWS Prod (ACM + S3 +  Cloudfront)
 
 on:
   push:
     branches:
-      - master
+    - master
 
 jobs:
-  build_and_deploy:
+  deploy:
     runs-on: ubuntu-latest
+    outputs:
+      invalidation_id: ${{ steps.cloudfront_invalidation.INVALIDATION_ID}}
     steps:
-      - uses: actions/checkout@v3
-      - uses: akhileshns/heroku-deploy@v3.12.14
-        with:
-          heroku_email: "${{ vars.HEROKU_EMAIL }}"
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: "bennun-rickys-folio"
-          appdir: public
-          buildpack: https://github.com/heroku/heroku-buildpack-php
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Deploy static site to S3 bucket
+      run: aws s3 sync ./public/ s3://${{vars.BUCKET_NAME}} --delete
+    
+    - name: Cloud front invalidation
+      id: cloudfront_invalidation
+      run: |
+        INVALIDATION_RESPONSE=`aws cloudfront create-invalidation --distribution-id ${{vars.DISTRIBUTION_ID}} --paths "/*" | jq '.Invalidation.Id'`
+        echo INVALIDATION_ID=$INVALIDATION_RESPONSE >> "$GITHUB_OUTPUT"
+
+    - name: Wait for invalidation complete
+      env: 
+        INVALIDATION_ID: ${{ steps.cloudfront_invalidation.outputs.invalidation_id }}
+      run: |
+        STATUS=`aws cloudfront get-invalidation --distribution-id ${{vars.DISTRIBUTION_ID}} --id ${{ steps.cloudfront_invalidation.outputs.invalidation_id }} | jq '.Invalidation.Status'`
+        echo "Cloudfront invalidation status: $STATUS"
+
+        while [ $STATUS = "\"InProgress\"" ]; do
+          sleep 5
+          STATUS=`aws cloudfront get-invalidation --distribution-id ${{vars.DISTRIBUTION_ID}} --id ${{ steps.cloudfront_invalidation.outputs.invalidation_id }} | jq '.Invalidation.Status'`
+          echo "Cloudfront invalidation status (checking): $STATUS"
+        done
+
+        echo "Done checking"
